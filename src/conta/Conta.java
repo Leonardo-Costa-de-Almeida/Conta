@@ -1,27 +1,30 @@
 package conta;
 
-import java.util.Scanner;
-
 public class Conta {
 
-	public void dados(String a, int b, int c) {
-		String name;
-		int cdigitos;
-		int saldo = 5;
+	String name;
+	int cdigitos;
+	int saldo;
+	
+	//constructor
+	public Conta(String name, int cdigitos, int saldo) 
+	    { 
+	        this.name = name; 
+	        this.cdigitos = cdigitos; 
+	        this.saldo = saldo; 
+	     
+	    }
+	
+	//methods
+	public String getName() {
+		return name;
 	}
 	
-
-	
-	
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite o nome");
-		String a;
-		int b;
-		int c;
-		
-		sc.next() = dados(a);
-		//depressao
+	public int getCdigitos() {
+		return cdigitos;
 	}
-
+	
+	public int saldo() {
+		return saldo;
+	}
 }
