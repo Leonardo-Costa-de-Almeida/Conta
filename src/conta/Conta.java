@@ -1,15 +1,15 @@
 package conta;
 
-import java.util.Scanner;
+
 
 public class Conta {
-	Scanner sc = new Scanner(System.in);
+	
 	String name;
 	int cdigitos;
-	int saldo;
+	double saldo;
 
 	// constructor
-	public Conta(String name, int cdigitos, int saldo) {
+	public Conta(String name, int cdigitos, double saldo) {
 
 		this.name = name;
 		this.cdigitos = cdigitos;
@@ -19,18 +19,35 @@ public class Conta {
 
 	// methods
 	public String getName() {
-		name = sc.next();
 		
-		return name;
+		
+		return this.name;
 	}
 
 	public int getCdigitos() {
-		cdigitos = sc.nextInt();
+		
 		return cdigitos;
 	}
 
-	public int saldo() {
-		saldo = sc.nextInt();
+	public double saldo() {
+		
 		return saldo;
+	}
+	
+	
+
+	public void setName(String nome) {
+		
+		this.name = nome;
+		
+		
+	}
+	
+	public void setCdigitos(int digitos) {
+		this.cdigitos = digitos;
+	}
+	
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 }
