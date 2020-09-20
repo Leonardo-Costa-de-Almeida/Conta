@@ -14,11 +14,11 @@ public class Main {
 
 		Conta contas = new Conta(nome, cdigito, saldo);
 
-		System.out.println("Olá, bem vindo ao Banco bibitos!");
+		System.out.println("Olï¿½, bem vindo ao Banco bibitos!");
 
 		// criando conta
 		System.out.println("Digite seu nome: ");
-		String dnome = sc.next();
+		String dnome = sc.nextLine();
 		contas.setName(dnome);
 
 		System.out.println("Muito bem!");
@@ -28,15 +28,15 @@ public class Main {
 
 		// deposito inicial
 		System.out.println("deseja realizar um deposito incial?");
-		System.out.println("Sim digite 1 / Não digite 2");
+		System.out.println("Sim digite 1 / Nï¿½o digite 2");
 		escolha = sc.nextInt();
 		if (escolha == 1) {
 			System.out.println("digite o valor que deseja depositar: ");
-			int dsaldo = sc.nextInt();
+			double dsaldo = sc.nextDouble();
 			contas.setSaldo(dsaldo);
 
 		} else if (escolha == 2) {
-			System.out.println("seu saldo inicial será 0 ");
+			System.out.println("seu saldo inicial serï¿½ 0 ");
 
 		}
 
@@ -47,7 +47,7 @@ public class Main {
 				"nome: " + contas.getName() + " Digitos: " + contas.getCdigitos() + " saldo: " + contas.saldo());
 
 		System.out.println(
-				"qual operacao deseja realizar? ||P/ saque digite 1 ||P/ deposito digite 2|| P/ trocar de nome digite 3||  ");
+                "qual operacao deseja realizar? ||P/ saque digite 1 ||P/ deposito digite 2|| P/ trocar de nome digite 3||  ");
 		escolha = sc.nextInt();
 
 		while (escolha != 0) {
@@ -71,18 +71,16 @@ public class Main {
 				System.out.println("seu novo saldo: " + contas.saldo());
 			} else if (escolha == 3) {
 				System.out.println("digite o seu novo nome: ");
-				String newname = sc.next();
-				nome = newname;
-				contas.setName(nome);
-				System.out.println("seu novo nome é: " + contas.getName());
-			}else if(escolha <= 0 || escolha > 3) {
+				String newname = sc.nextLine();
+				contas.setName(newname);
+				System.out.println("seu novo nome ï¿½: " + contas.getName());
+			}else {
 				System.out.println("digite uma escolha valida");
 			}
 			
 			System.out.println("qual operacao deseja realizar? ||P/ saque digite 1 ||P/ deposito digite 2|| P/ trocar de nome digite 3||  ");
 
 			escolha = sc.nextInt();
-
 		}
 
 		System.out.println("obrigado por usar o banco do Bibito");
